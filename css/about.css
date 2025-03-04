@@ -1,0 +1,163 @@
+.about__achievements {
+    margin-top: 3rem;
+}
+
+.about__achievements-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 5rem;
+}
+.about__achievements-right > p {
+    margin: 1.6rem 0 2.5rem;
+}
+
+.achievements__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+.achievement__card {
+    background: var(--color-bg1);
+    padding: 1rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.achievement__card:hover {
+    background: var(--color-bg2);
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+}
+.achievements__icon {
+    background: var(--color-success);
+    padding: 0.6rem;
+    border-radius: 0.9rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.achievement__card:nth-child(2) .achievements__icon {
+    background: var(--color-danger-variant);
+}
+.achievement__card:nth-child(3) .achievements__icon {
+    background: var(--color-primary);
+}
+.achievement__card p {
+    margin-top: 1rem;
+}
+.achievement__card h3 {
+    font-size: 2rem;
+}
+
+/* ========================== Team =================================== */
+/* ================= TEAM ================= */
+.team {
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+    padding: 2rem 1rem; /* Add padding to the section */
+}
+
+.team_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Maintain 4 columns */
+    gap: 2rem; /* Spacing between cards is consistent */
+    justify-content: center; /* Center the entire grid */
+    align-items: start; /* Align cards to the top */
+}
+
+.team_member {
+    background: var(--color-bg2);
+    padding: 2.5rem; /* Slightly increase padding for better size */
+    border: 1px solid transparent;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content inside the card */
+    text-align: center;
+    max-width: 18rem; /* Adjust width for consistent card size */
+    margin: 0 auto; /* Center-align each card */
+}
+
+.team_member:hover {
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+.team_member-image img {
+    width: 100%;
+    height: auto;
+    filter: saturate(0); /* Grayscale by default */
+}
+
+.team_member:hover img {
+    filter: saturate(1); /* Full color on hover */
+}
+
+.team_member-info * {
+    margin-top: 1rem;
+}
+
+.team_member-info p {
+    color: var(--color-light);
+    font-size: 1rem; /* Adjust text size for better visibility */
+}
+
+.team_member-socials {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-primary);
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.3);
+    transition: right 0.3s ease-in-out;
+}
+
+.team_member:hover .team_member-socials {
+    right: 0;
+}
+
+.team_member-socials a {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* For rows with fewer members (First line is untouched) */
+.team_member:nth-child(1),
+.team_member:nth-child(2) {
+    grid-column: span 2; /* Keep first row visually balanced */
+    justify-self: center;
+}
+
+/* Reduce gaps for the second hierarchy */
+.team_container > :nth-child(3),
+.team_container > :nth-child(4),
+.team_container > :nth-child(5),
+.team_container > :nth-child(6),
+.team_container > :nth-child(7),
+.team_container > :nth-child(8) {
+    margin-top: 0; /* Reduce vertical gap for these cards */
+    margin-bottom: 1rem;
+}
+
+/* Adjust card spacing for the second hierarchy */
+.team_container > :nth-child(9),
+.team_container > :nth-child(10),
+.team_container > :nth-child(11),
+.team_container > :nth-child(12),
+.team_container > :nth-child(13),
+.team_container > :nth-child(14) {
+    margin: 1rem auto; /* Center-align with reduced vertical spacing */
+}
+
+
+
