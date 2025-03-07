@@ -118,7 +118,11 @@
     .nav_menu a:hover {
         color: var(--color-bg2);
     }
-    
+    .nav-logo {
+        height: 50px; /* Adjust based on your logo */
+        width: auto;
+        display: block;
+    }    
     /* ------------------------------Header--------------------------------------*/
     header {
         position: relative;
