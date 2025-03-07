@@ -118,6 +118,7 @@
     .nav_menu a:hover {
         color: var(--color-bg2);
     }
+    
     /* ------------------------------Header--------------------------------------*/
     header {
         position: relative;
