@@ -119,10 +119,28 @@
         color: var(--color-bg2);
     }
     .nav-logo {
-        height: 50px; /* Adjust based on your logo */
+        height: 55px; /* Adjust based on your logo */
         width: auto;
         display: block;
-    }    
+        margin-top: 5px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+    .nav-logo:hover {
+        opacity: 0.6;
+    }
+    .nav-ieee-logo {
+        height: 35px;
+        width: auto;
+        margin-left: 30px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+    
+    .nav-ieee-logo:hover {
+        opacity: 0.5;
+    }
+    
     /* ------------------------------Header--------------------------------------*/
     header {
         position: relative;
@@ -141,8 +159,17 @@
     .header__left p {
         margin: 1rem 0 2.4rem;
     }
-
-    /*-------------------------------categories------------------------*/
+    @keyframes floatAnimation {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+    }
+    
+    .header__right-image img {
+        animation: floatAnimation 3s ease-in-out infinite;
+    }
+        
+        /*-------------------------------categories------------------------*/
 
     .project_categories {
         background-color: var(--color-bg1);
