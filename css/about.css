@@ -1,11 +1,8 @@
-.about__achievements {
-    margin-top: 3rem;
-}
-
 .about__achievements-container {
     display: grid;
     grid-template-columns: 40% 60%;
     gap: 5rem;
+    padding-top: 3rem;
 }
 .about__achievements-right > p {
     margin: 1.6rem 0 2.5rem;
@@ -132,31 +129,34 @@
 }
 
 /* For rows with fewer members (First line is untouched) */
-.team_member:nth-child(1),
-.team_member:nth-child(2) {
-    grid-column: span 2; /* Keep first row visually balanced */
-    justify-self: center;
+.team_member:nth-child(1) {
+   /* Center the first row's only remaining image */
+     grid-column: span 4; /* Make it take the full row */
+    justify-self: center; /* Center it */
 }
 
+
+
 /* Reduce gaps for the second hierarchy */
+.team_container > :nth-child(2),
 .team_container > :nth-child(3),
 .team_container > :nth-child(4),
 .team_container > :nth-child(5),
 .team_container > :nth-child(6),
-.team_container > :nth-child(7),
-.team_container > :nth-child(8) {
+.team_container > :nth-child(7) {
     margin-top: 0; /* Reduce vertical gap for these cards */
     margin-bottom: 1rem;
 }
 
 /* Adjust card spacing for the second hierarchy */
+.team_container > :nth-child(8),
 .team_container > :nth-child(9),
 .team_container > :nth-child(10),
 .team_container > :nth-child(11),
 .team_container > :nth-child(12),
-.team_container > :nth-child(13),
-.team_container > :nth-child(14) {
-    margin: 1rem auto; /* Center-align with reduced vertical spacing */
+.team_container > :nth-child(13) {
+    margin-top: 0; /* Reduce vertical gap for these cards */
+    margin-bottom: 1rem;
 }
 
 
