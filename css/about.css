@@ -153,8 +153,7 @@
 .team_container > :nth-child(9),
 .team_container > :nth-child(10),
 .team_container > :nth-child(11),
-.team_container > :nth-child(12),
-.team_container > :nth-child(13) {
+.team_container > :nth-child(12) {
     margin-top: 0; /* Reduce vertical gap for these cards */
     margin-bottom: 1rem;
 }
