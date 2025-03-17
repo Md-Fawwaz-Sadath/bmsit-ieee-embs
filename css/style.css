@@ -388,294 +388,292 @@
         font-size: 0.8rem;
     }
     
-
-    /* ==================== MEDIA QUERIES (TABLETS) ==================== */
-    @media screen and (max-width: 1024px) {
-        .container {
-            width: var(--container-width-md);
-        }
-    
-        h1 {
-            font-size: 2.2rem;
-        }
-    
-        h2 {
-            font-size: 1.7rem;
-        }
-    
-        h3 {
-            font-size: 1.4rem;
-        }
-    
-        h4 {
-            font-size: 1.2rem;
-        }
-    
-        /* ========== NAVBAR ========== */
-        nav {
-            height: 4.5rem;
-        }
-    
-        .nav-logo {
-            width: 120px;
-        }
-    
-        .nav-ieee-logo {
-            width: 80px;
-        }
-    
-        .nav_menu {
-            gap: 2rem;
-        }
-    
-        /* ========== HEADER ========== */
-        header {
-            height: 65vh;
-            margin-bottom: 3rem;
-        }
-    
-        .header__container {
-            gap: 3rem;
-        }
-    
-        .header__left p {
-            margin: 1rem 0 1.5rem;
-        }
-    
-        /* ========== PROJECT CATEGORIES ========== */
-        .project_categories {
-            padding: 4rem 0;
-        }
-    
-        .project_categories__container {
-            gap: 3rem;
-        }
-    
-        .project_categories_left {
-            margin-bottom: 2rem;
-        }
-    
-        .category {
-            padding: 1.5rem;
-        }
-    
-        /* ========== FAQS ========== */
-        .faqs__container {
-            gap: 1rem;
-        }
-    
-        .faq {
-            padding: 1rem;
-        }
-    
-        /* ========== FOOTER ========== */
-        .footer__container {
-            gap: 2rem;
-        }
-    
-        .footer__1 img {
-            width: 100px;
-        }
-    }
-    
-    /* ==================== MEDIA QUERIES (MOBILE) ==================== */
-    @media screen and (max-width: 600px) {
-        .container {
-            width: var(--container-width-sm);
-        }
-    
-        /* ========== NAVBAR ========== */
-        nav {
-            height: 4rem;
-        }
-    
-        .nav__container {
-            position: relative;
-        }
-    
-        .nav_menu {
-            position: fixed;
-            top: 4rem;
-            right: -100%;
-            height: 100vh;
-            width: 80%;
-            flex-direction: column;
-            gap: 0;
-            background: var(--color-bg2);
-            padding: 2rem;
-            transition: var(--transition);
-            z-index: 1000;
-        }
-    
-        .nav_menu.active {
-            right: 0;
-        }
-    
-        .nav_menu li {
-            width: 100%;
-            margin-bottom: 1rem;
-        }
-    
-        .nav_menu li a {
-            display: block;
-            padding: 1rem 0;
-            font-size: 1.1rem;
-        }
-    
-        .nav-logo {
-            width: 100px;
-        }
-    
-        .nav-ieee-logo {
-            width: 70px;
-        }
-    
-        nav button {
-            display: inline-block;
-            background: transparent;
-            font-size: 1.8rem;
-            color: var(--color-white);
-            cursor: pointer;
-        }
-    
-        #close-menu-btn {
-            display: none;
-        }
-    
-        /* ========== HEADER ========== */
-        header {
-            height: auto;
-            padding: 6rem 0 3rem;
-        }
-    
-        .header__container {
-            grid-template-columns: 1fr;
-            text-align: center;
-            gap: 2rem;
-        }
-    
-        .header__left {
-            margin-bottom: 2rem;
-        }
-    
-        .header__left p {
-            margin: 1rem auto 1.5rem;
-            width: 90%;
-        }
-    
-        /* ========== PROJECT CATEGORIES ========== */
-        .project_categories__container {
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-    
-        .project_categories_left {
-            text-align: center;
-        }
-    
-        .project_categories_right {
-            grid-template-columns: 1fr;
-            gap: 1rem;
-        }
-    
-        .category {
-            text-align: center;
-        }
-    
-        /* ========== FAQS ========== */
-        .faqs__container {
-            grid-template-columns: 1fr;
-        }
-    
-        .faq {
-            padding: 1rem;
-            gap: 1rem;
-        }
-    
-        /* ========== FOOTER ========== */
-        .footer__container {
-            grid-template-columns: 1fr;
-            text-align: center;
-            gap: 2rem;
-        }
-    
-        .footer__1 {
-            margin: 0 auto;
-        }
-    
-        .footer__1 img {
-            width: 90px;
-            margin: 0 auto;
-        }
-    
-        .footer__socials ul {
-            justify-content: center;
-        }
-    
-        .contact__item {
-            justify-content: center;
-        }
-    
-        .footer__copyright {
-            margin-top: 2rem;
-        }
-    }
-    
-    /* ==================== MEDIA QUERIES (SMALL MOBILE) ==================== */
-    @media screen and (max-width: 400px) {
-        h1 {
-            font-size: 1.8rem;
-        }
-    
-        .header__left p {
-            width: 98%;
-        }
-    
-        .nav_menu {
-            width: 90%;
-        }
-    
-        .category {
-            padding: 1rem;
-        }
-    
-        .footer__1 img {
-            width: 80px;
-        }
-    
-        .footer__socials ul {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 0.5rem;
-        }
-    }
-    
-    /* ==================== ANIMATIONS ==================== */
-    @keyframes slideIn {
-        from {
-            transform: translateX(100%);
-            opacity: 0;
-        }
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-    
-    .nav_menu.active {
-        animation: slideIn 0.3s ease forwards;
-    }
-    
-    /* ==================== TRANSITIONS ==================== */
-    .nav_menu, .nav_menu li a, .btn, .category, .footer__socials a {
-        transition: all 0.3s ease;
-    }
-    
-    /* ==================== UTILITY CLASSES ==================== */
+  /* ==================== MEDIA QUERIES (TABLETS) ==================== */
+@media screen and (max-width: 1024px) {
     .container {
-        transition: width 0.3s ease;
+        width: var(--container-width-md);
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    /* ========== NAVBAR ========== */
+    nav {
+        height: 4.5rem;
+    }
+
+    .nav-logo {
+        width: 120px;
+    }
+
+    .nav_menu {
+        gap: 2rem;
+    }
+
+    /* ========== HEADER ========== */
+    header {
+        height: 65vh;
+        margin-bottom: 3rem;
+    }
+
+    .header__container {
+        gap: 3rem;
+    }
+
+    .header__left p {
+        margin: 1rem 0 1.5rem;
+    }
+
+    /* ========== PROJECT CATEGORIES ========== */
+    .project_categories {
+        padding: 4rem 0;
+    }
+
+    .project_categories__container {
+        gap: 3rem;
+    }
+
+    .project_categories_left {
+        margin-bottom: 2rem;
+    }
+
+    .category {
+        padding: 1.5rem;
+    }
+
+    /* ========== FAQS ========== */
+    .faqs__container {
+        gap: 1rem;
+    }
+
+    .faq {
+        padding: 1rem;
+    }
+
+    /* ========== FOOTER ========== */
+    .footer__container {
+        grid-template-columns: 1fr 1fr 1.5fr 1fr;
+        gap: 2rem;
+    }
+
+    .footer__1 img {
+        width: 100px;
+    }
+
+    .nav__container {
+        padding: 0 1.5rem;
     }
     
-    img {
-        transition: width 0.3s ease;
+    .nav-logo {
+        height: 2.8rem;
     }
     
+    .nav_menu {
+        gap: 2.5rem;
+    }
+}
+
+/* ==================== MEDIA QUERIES (TABLETS - 768px) ==================== */
+@media screen and (max-width: 768px) {
+    .footer__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==================== MEDIA QUERIES (MOBILE) ==================== */
+@media screen and (max-width: 600px) {
+    .container {
+        width: var(--container-width-sm);
+    }
+
+    /* ========== NAVBAR ========== */
+    nav {
+        height: 4rem;
+    }
+
+    .nav__container {
+        position: relative;
+        padding: 0 1rem;
+    }
+
+    .nav_menu {
+        position: fixed;
+        top: 4rem;
+        right: -100%;
+        height: 100vh;
+        width: 80%;
+        flex-direction: column;
+        gap: 0;
+        background: var(--color-bg2);
+        padding: 2rem;
+        transition: var(--transition);
+        z-index: 1000;
+    }
+
+    .nav_menu.active {
+        right: 0;
+    }
+
+    .nav_menu li {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .nav_menu li a {
+        display: block;
+        padding: 1rem 0;
+        font-size: 1.1rem;
+    }
+
+    .nav-logo {
+        width: 100px;
+        height: 2.5rem;
+    }
+
+    nav button {
+        display: inline-block;
+        background: transparent;
+        font-size: 1.8rem;
+        color: var(--color-white);
+        cursor: pointer;
+    }
+
+    #close-menu-btn {
+        display: none;
+    }
+
+    /* ========== HEADER ========== */
+    header {
+        height: auto;
+        padding: 6rem 0 3rem;
+    }
+
+    .header__container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .header__left {
+        margin-bottom: 2rem;
+    }
+
+    .header__left p {
+        margin: 1rem auto 1.5rem;
+        width: 90%;
+    }
+
+    /* ========== PROJECT CATEGORIES ========== */
+    .project_categories__container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .project_categories_left {
+        text-align: center;
+    }
+
+    .project_categories_right {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .category {
+        text-align: center;
+    }
+
+    /* ========== FAQS ========== */
+    .faqs__container {
+        grid-template-columns: 1fr;
+    }
+
+    .faq {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    /* ========== FOOTER ========== */
+    .footer__container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .footer__1 {
+        margin: 0 auto;
+    }
+
+    .footer__1 img {
+        width: 90px;
+        margin: 0 auto;
+    }
+
+    .footer__socials ul {
+        justify-content: center;
+    }
+
+    .contact__item {
+        justify-content: center;
+    }
+
+    .footer__copyright {
+        margin-top: 2rem;
+    }
+}
+
+/* ==================== MEDIA QUERIES (SMALL MOBILE) ==================== */
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .header__left p {
+        width: 98%;
+    }
+
+    .nav_menu {
+        width: 90%;
+    }
+
+    .category {
+        padding: 1rem;
+    }
+
+    .footer__1 img {
+        width: 80px;
+    }
+
+    .footer__socials ul {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.nav_menu.active {
+    animation: slideIn 0.3s ease forwards;
+}
