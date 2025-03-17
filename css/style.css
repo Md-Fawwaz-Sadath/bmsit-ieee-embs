@@ -388,8 +388,8 @@
         font-size: 0.8rem;
     }
     
- /* Media Queries */
- @media screen and (max-width: 1024px) {
+   /* Media Queries */
+   @media screen and (max-width: 1024px) {
     .footer__container {
         grid-template-columns: 1fr 1fr 1.5fr 1fr;
         gap: 2rem;
@@ -550,6 +550,7 @@
     /* ========== NAVBAR ========== */
     nav {
         height: 4rem;
+        background: var(--color-bg1);
     }
 
     .nav__container {
@@ -557,6 +558,33 @@
         padding: 0 1rem;
     }
 
+    /* Show the menu button */
+    nav button {
+        display: inline-block;
+        background: transparent;
+        font-size: 1.8rem;
+        color: var(--color-white);
+        cursor: pointer;
+        border: none;
+        outline: none;
+        margin-left: 1rem;
+    }
+
+    /* Adjust logo size */
+    .nav-logo {
+        height: 2.8rem;  /* Slightly increased from 2.5rem */
+        width: auto;
+        padding: 0.3rem;
+        margin-right: auto;
+        object-fit: contain;
+    }
+
+    /* Hide IEEE logo */
+    .nav-ieee-logo {
+        display: none;
+    }
+
+    /* Mobile menu styles */
     .nav_menu {
         position: fixed;
         top: 4rem;
@@ -586,24 +614,22 @@
         font-size: 1.1rem;
     }
 
-    .nav-logo {
-        height: 2.5rem;
-        width: auto;
-        padding: 0.4rem;
-        margin-right: auto;
-        object-fit: contain;
-    }
-
-    .nav-ieee-logo {
-        display: none; /* Hides the IEEE logo on mobile */
-    }
-
-    nav button {
-        margin-left: 1rem; /* Add space between EMBS logo and menu button */
+    /* Menu button states */
+    #open-menu-btn {
+        display: inline-block;
     }
 
     #close-menu-btn {
         display: none;
+    }
+
+    /* When menu is active, swap buttons */
+    .nav_menu.active ~ #open-menu-btn {
+        display: none;
+    }
+
+    .nav_menu.active ~ #close-menu-btn {
+        display: inline-block;
     }
 
     /* ========== HEADER ========== */
