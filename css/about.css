@@ -1,8 +1,11 @@
+.about__achievements {
+    margin-top: 3rem;
+}
+
 .about__achievements-container {
     display: grid;
     grid-template-columns: 40% 60%;
     gap: 5rem;
-    padding-top: 3rem;
 }
 .about__achievements-right > p {
     margin: 1.6rem 0 2.5rem;
@@ -52,32 +55,70 @@
 .team {
     background: var(--color-bg1);
     box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
-    padding: 2rem 1rem; /* Add padding to the section */
+    padding: 2rem 1rem;
 }
 
 .team_container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Maintain 4 columns */
-    gap: 2rem; /* Spacing between cards is consistent */
-    justify-content: center; /* Center the entire grid */
-    align-items: start; /* Align cards to the top */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1200px; /* Add max-width for better control */
+    margin: 0 auto;
 }
 
 .team_member {
     background: var(--color-bg2);
-    padding: 2.5rem; /* Slightly increase padding for better size */
+    padding: 2rem;
     border: 1px solid transparent;
     transition: var(--transition);
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content inside the card */
+    align-items: center;
     text-align: center;
-    max-width: 18rem; /* Adjust width for consistent card size */
-    margin: 0 auto; /* Center-align each card */
+    width: 100%;
+    max-width: 280px; /* Control maximum width of each card */
+    margin: 0 auto;
 }
 
+/* Special handling for the last row */
+.team_member:nth-last-child(-n+4) {
+    justify-self: center;
+}
+
+/* Media queries for responsive layout */
+@media screen and (max-width: 1024px) {
+    .team_container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .team_member:nth-last-child(-n+3) {
+        justify-self: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .team_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .team_member:nth-last-child(-n+2) {
+        justify-self: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .team_container {
+        grid-template-columns: 1fr;
+    }
+    
+    .team_member {
+        max-width: 300px;
+    }
+}
+
+/* Rest of your existing team member styles remain unchanged */
 .team_member:hover {
     background: transparent;
     border-color: var(--color-primary);
@@ -86,11 +127,11 @@
 .team_member-image img {
     width: 100%;
     height: auto;
-    filter: saturate(0); /* Grayscale by default */
+    filter: saturate(0);
 }
 
 .team_member:hover img {
-    filter: saturate(1); /* Full color on hover */
+    filter: saturate(1);
 }
 
 .team_member-info * {
@@ -99,7 +140,7 @@
 
 .team_member-info p {
     color: var(--color-light);
-    font-size: 1rem; /* Adjust text size for better visibility */
+    font-size: 1rem;
 }
 
 .team_member-socials {
@@ -126,36 +167,6 @@
     justify-content: center;
     color: white;
     font-size: 1.2rem;
-}
-
-/* For rows with fewer members (First line is untouched) */
-.team_member:nth-child(1) {
-   /* Center the first row's only remaining image */
-     grid-column: span 4; /* Make it take the full row */
-    justify-self: center; /* Center it */
-}
-
-
-
-/* Reduce gaps for the second hierarchy */
-.team_container > :nth-child(2),
-.team_container > :nth-child(3),
-.team_container > :nth-child(4),
-.team_container > :nth-child(5),
-.team_container > :nth-child(6),
-.team_container > :nth-child(7) {
-    margin-top: 0; /* Reduce vertical gap for these cards */
-    margin-bottom: 1rem;
-}
-
-/* Adjust card spacing for the second hierarchy */
-.team_container > :nth-child(8),
-.team_container > :nth-child(9),
-.team_container > :nth-child(10),
-.team_container > :nth-child(11),
-.team_container > :nth-child(12) {
-    margin-top: 0; /* Reduce vertical gap for these cards */
-    margin-bottom: 1rem;
 }
 
 
