@@ -23,3 +23,20 @@
             }
         })
     })
+
+    // Mobile Menu Toggle
+const menu = document.querySelector('.nav_menu');
+const openBtn = document.querySelector('#open-menu-btn');
+const closeBtn = document.querySelector('#close-menu-btn');
+
+openBtn.addEventListener('click', () => {
+    menu.classList.add('active');
+    closeBtn.style.display = 'inline-block';
+    openBtn.style.display = 'none';
+});
+
+closeBtn.addEventListener('click', () => {
+    menu.classList.remove('active');
+    closeBtn.style.display = 'none';
+    openBtn.style.display = 'inline-block';
+});
