@@ -572,7 +572,7 @@
 
     /* Adjust logo size */
     .nav-logo {
-        height: 3rem;  /* Slightly increased from 2.5rem */
+        height: 5rem;  /* Slightly increased from 2.5rem */
         width: auto;
         padding: 0.3rem;
         margin-right: auto;
