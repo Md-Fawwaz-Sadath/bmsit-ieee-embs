@@ -388,7 +388,47 @@
         font-size: 0.8rem;
     }
     
-  /* ==================== MEDIA QUERIES (TABLETS) ==================== */
+ /* Media Queries */
+ @media screen and (max-width: 1024px) {
+    .footer__container {
+        grid-template-columns: 1fr 1fr 1.5fr 1fr;
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer__container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer__1 {
+        align-items: center;
+    }
+    
+    .footer__1 img {
+        width: 100px;
+    }
+    
+    .contact__item {
+        justify-content: center;
+    }
+    
+    .footer__socials ul {
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+/* ==================== MEDIA QUERIES (TABLETS) ==================== */
 @media screen and (max-width: 1024px) {
     .container {
         width: var(--container-width-md);
@@ -465,7 +505,6 @@
 
     /* ========== FOOTER ========== */
     .footer__container {
-        grid-template-columns: 1fr 1fr 1.5fr 1fr;
         gap: 2rem;
     }
 
@@ -479,6 +518,15 @@
     
     .nav-logo {
         height: 2.8rem;
+        width: auto;
+        padding: 0.3rem;
+        object-fit: contain;
+    }
+    
+    .nav-ieee-logo {
+        width: 80px;
+        height: auto;
+        padding: 0.3rem;
     }
     
     .nav_menu {
@@ -539,16 +587,19 @@
     }
 
     .nav-logo {
-        width: 100px;
         height: 2.5rem;
+        width: auto;
+        padding: 0.4rem;
+        margin-right: auto;
+        object-fit: contain;
+    }
+
+    .nav-ieee-logo {
+        display: none; /* Hides the IEEE logo on mobile */
     }
 
     nav button {
-        display: inline-block;
-        background: transparent;
-        font-size: 1.8rem;
-        color: var(--color-white);
-        cursor: pointer;
+        margin-left: 1rem; /* Add space between EMBS logo and menu button */
     }
 
     #close-menu-btn {
@@ -660,6 +711,11 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 0.5rem;
     }
+
+    .nav-logo {
+        height: 2.3rem;
+        padding: 0.3rem;
+    }
 }
 
 /* ==================== ANIMATIONS ==================== */
@@ -676,4 +732,64 @@
 
 .nav_menu.active {
     animation: slideIn 0.3s ease forwards;
+}
+
+/* ==================== TRANSITIONS ==================== */
+.nav_menu, .nav_menu li a, .btn, .category, .footer__socials a {
+    transition: all 0.3s ease;
+}
+
+/* ==================== UTILITY CLASSES ==================== */
+.container {
+    transition: width 0.3s ease;
+}
+
+img {
+    transition: width 0.3s ease;
+}
+
+/* Media Queries for Navigation */
+@media screen and (max-width: 1024px) {
+    .nav__container {
+        padding: 0 1.5rem;
+    }
+    
+    .nav-logo {
+        height: 2.8rem;
+        width: auto;
+        padding: 0.3rem;
+        object-fit: contain;
+    }
+    
+    .nav-ieee-logo {
+        width: 80px;
+        height: auto;
+        padding: 0.3rem;
+    }
+    
+    .nav_menu {
+        gap: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .nav__container {
+        padding: 0 1rem;
+    }
+    
+    .nav-logo {
+        height: 2.5rem;
+        width: auto;
+        padding: 0.4rem;
+        margin-right: auto;
+        object-fit: contain;
+    }
+
+    .nav-ieee-logo {
+        display: none; /* Hides the IEEE logo on mobile */
+    }
+
+    nav button {
+        margin-left: 1rem; /* Add space between EMBS logo and menu button */
+    }
 }
