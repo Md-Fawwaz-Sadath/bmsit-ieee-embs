@@ -21,6 +21,17 @@ window.addEventListener('scroll', () => {
     document.querySelector('nav').classList.toggle('window-scroll', window.scrollY > 0);
 });
 
+// Ensure menu button is visible on mobile
+window.addEventListener('resize', () => {
+    if (window.innerWidth <= 600) {
+        openBtn.style.display = 'inline-block';
+        closeBtn.style.display = 'none';
+        if (!menu.classList.contains('active')) {
+            menu.classList.remove('active');
+        }
+    }
+});
+
 const faqs = document.querySelectorAll('.faq');
 
 faqs.forEach(faq => {
