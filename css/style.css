@@ -550,7 +550,7 @@
     /* ========== NAVBAR ========== */
     nav {
         height: 4rem;
-        background: var(--color-bg1);
+        /* background: var(--color-bg1); */
     }
 
     .nav__container {
