@@ -24,6 +24,7 @@
     margin-bottom: 1.5rem;
     line-height: 1.1;
     background: linear-gradient(45deg, var(--color-white), var(--color-light));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -279,13 +280,22 @@
     border-radius: 1.5rem;
     padding: 2px;
     background: linear-gradient(45deg, var(--color-primary), transparent);
+
+    /* Standard mask property for better compatibility */
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+
+    /* WebKit-specific mask (Chrome, Safari, Edge) */
     -webkit-mask: 
         linear-gradient(#fff 0 0) content-box, 
         linear-gradient(#fff 0 0);
+    
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     pointer-events: none;
 }
+
 
 .map__container iframe {
     width: 100%;
