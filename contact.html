@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - IEEE EMBS</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    
+    <!-- FONTAWESOME CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="container nav__container">
+            <a href="index.html">
+                <img src="./images/embs.png" alt="IEEE EMBS Logo" class="nav-logo">
+            </a>
+            <ul class="nav_menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="https://www.ieee.org/"  target="_blank">
+                <img src="./images/ieeelogo.png" alt="IEEE Logo" class="nav-ieee-logo">
+            </a>
+            <button id="open-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            <button id="close-menu-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <header class="contact__header">
+        <div class="container contact__header-container">
+            <div class="contact__header-left">
+                <h1>Get in Touch</h1>
+                <p>Have questions about IEEE EMBS or want to collaborate? We'd love to hear from you. Fill out the form below and we'll get back to you soon.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Content -->
+    <section class="contact">
+        <div class="container contact__container">
+            <!-- Contact Info -->
+            <aside class="contact__aside">
+                <h3>Contact Information</h3>
+                <p>Reach out to us through any of these channels:</p>
+                <ul class="contact__details">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h5>Address</h5>
+                        <p>BMSIT&M, Yelhanka, Bangalore</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <h5>Email</h5>
+                        <p>jayashree.kth@gmail.com</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-user"></i>
+                        <h5>Contact Person</h5>
+                        <p>Jayashree (Chair)</p>
+                    </li>
+                </ul>
+                <ul class="contact__socials">
+                    <li><a href="https://chat.whatsapp.com/DJWE51VDRBdAcd49HokNIr" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="https://www.instagram.com/embs_bmsit?igsh=MWVra3owOHJiZmZpMA==" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                </ul>
+            </aside>
+
+            <!-- Contact Form -->
+            <form class="contact__form">
+                <div class="form__group">
+                    <input type="text" name="name" id="name" required>
+                    <label for="name">Your Name</label>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="form__group">
+                    <input type="email" name="email" id="email" required>
+                    <label for="email">Your Email</label>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="form__group">
+                    <input type="text" name="subject" id="subject" required>
+                    <label for="subject">Subject</label>
+                    <i class="fa-solid fa-message"></i>
+                </div>
+                <div class="form__group">
+                    <textarea name="message" id="message" rows="7" required></textarea>
+                    <label for="message">Your Message</label>
+                    <i class="fa-solid fa-pen"></i>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map">
+        <div class="container map__container">
+            <!-- <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.016493592812!2d77.53798777379788!3d13.093441087246725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17dedd4dcca9%3A0x7c4319f4c13fe953!2sBMS%20Institute%20of%20Technology%20and%20Management!5e0!3m2!1sen!2sin!4v1708799977419!5m2!1sen!2sin" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="BMSIT&M Location Map">
+            </iframe> -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.4468017758004!2d77.5668177750068!3d13.134192811292781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae18a5c54ece35%3A0x49c4c47a68a60b9c!2sBMS%20Institute%20of%20Technology%20and%20Management!5e0!3m2!1sen!2sin!4v1742402577674!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer__container">
+            <div class="footer__1">
+                <a href="index.html">
+                    <img src="./images/embslogo1.png" alt="IEEE EMBS Logo" class="nav-logo">
+                </a>
+                <p>IEEE Engineering Medicine and Biological Society</p>
+            </div>    
+            <div class="footer__2">
+                <h4>Quick Links</h4>
+                <ul class="permalinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer__3">
+                <h4>Get in Touch</h4>
+                <div class="footer__contact">
+                    <div class="contact__item">
+                        <i class="fa-solid fa-user"></i>
+                        <p>Jayashree (Chair)</p>
+                    </div>
+                    <!-- <div class="contact__item">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>+91 86180 94407</p>
+                    </div> -->
+                    <div class="contact__item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>jayashree.kth@gmail.com</p>
+                    </div>
+                    <div class="contact__item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>BMSIT&M, Yelhanka, Bangalore</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__4">
+                <h4>Follow Us</h4>
+                <div class="footer__socials">
+                    <ul>
+                        <li><a href="https://chat.whatsapp.com/DJWE51VDRBdAcd49HokNIr" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+                        <li><a href="https://www.instagram.com/embs_bmsit?igsh=MWVra3owOHJiZmZpMA==" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <small>Copyright &copy; 2025 IEEE EMBS. All rights reserved.</small>
+        </div>
+     </footer>
+
+        <!-- Back to Top Button -->
+        <button id="back-to-top" title="Back to Top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+
+    <script src="./main.js"></script>
+</body>
+</html>

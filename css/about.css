@@ -129,7 +129,7 @@
     background: var(--color-bg2);
     padding: 2rem;
     border: 1px solid transparent;
-    transition: var(--transition);
+    transition: all 0.4s ease-in-out;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -137,6 +137,7 @@
     align-items: center;
     text-align: center;
     border-radius: 0.5rem;
+    cursor: pointer;
 }
 
 /* Special handling for the last row */
@@ -236,16 +237,21 @@
 .team_member:hover {
     background: transparent;
     border-color: var(--color-primary);
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 .team_member-image img {
     width: 100%;
-    height: auto;
-    filter: saturate(0);
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0) blur(2px);
+    transition: all 0.5s ease-in-out;
 }
 
-.team_member:hover img {
-    filter: saturate(1);
+.team_member:hover .team_member-image img {
+    filter: saturate(1) blur(0);
+    transform: scale(1.02);
 }
 
 .team_member-info * {
@@ -436,6 +442,109 @@
 .team_member,
 .gallery__item {
     animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Back to Top Button Styles */
+#back-to-top {
+    position: fixed !important;
+    bottom: clamp(1rem, 5vw, 2rem);
+    right: clamp(1rem, 5vw, 2rem);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-variant) 100%);
+    color: var(--color-white);
+    width: clamp(2.8rem, 8vw, 3.5rem);
+    height: clamp(2.8rem, 8vw, 3.5rem);
+    border-radius: 50%;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    visibility: hidden;
+    border: none;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15),
+                0 0 0 2px rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(20px);
+    pointer-events: all;
+    will-change: transform;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#back-to-top:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: linear-gradient(135deg, var(--color-primary-variant) 0%, var(--color-primary) 100%);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2),
+                0 0 0 4px rgba(255, 255, 255, 0.15);
+}
+
+#back-to-top:active {
+    transform: translateY(-2px) scale(0.95);
+}
+
+#back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    animation: fadeInScale 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Media Queries for Back to Top Button */
+@media screen and (max-width: 1024px) {
+    #back-to-top {
+        bottom: 2rem;
+        right: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #back-to-top {
+        bottom: 1.8rem;
+        right: 1.8rem;
+        width: 3.2rem;
+        height: 3.2rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #back-to-top {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 3rem;
+        height: 3rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #back-to-top {
+        bottom: 1.2rem;
+        right: 1.2rem;
+        width: 2.8rem;
+        height: 2.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (hover: none) {
+    #back-to-top:hover {
+        transform: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15),
+                    0 0 0 2px rgba(255, 255, 255, 0.1);
+    }
 }
 
 
