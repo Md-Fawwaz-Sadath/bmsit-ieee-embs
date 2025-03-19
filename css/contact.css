@@ -1,8 +1,8 @@
 /* Contact Header Styles */
 .contact__header {
     background: linear-gradient(135deg, var(--color-bg1) 0%, var(--color-bg2) 100%);
-    padding: 6rem 0 3rem;
-    min-height: 40vh;
+    padding: 6rem 0 8rem;
+    min-height: 30vh;
     display: flex;
     align-items: center;
     position: relative;
@@ -53,7 +53,7 @@
     background: var(--color-bg2);
     padding: 0;
     position: relative;
-    margin-top: -2rem;
+    margin-top: -4rem;
 }
 
 .contact__container {
@@ -68,11 +68,12 @@
 /* Contact Aside Styles */
 .contact__aside {
     background: var(--color-primary);
-    padding: 3rem;
+    padding: 3rem 2rem;
     border-radius: 1rem;
     position: relative;
-    bottom: 5rem;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     animation: slideUp 1s ease forwards;
 }
 
@@ -385,7 +386,7 @@
 /* Media Queries */
 @media screen and (max-width: 1024px) {
     .contact__header {
-        padding: 5rem 0 2.5rem;
+        padding: 5rem 0 7rem;
     }
 
     .contact__header-left h1 {
@@ -401,11 +402,12 @@
 @media screen and (max-width: 768px) {
     .contact__header {
         min-height: auto;
-        padding: 6rem 0 2rem;
+        padding: 5rem 0 6rem;
     }
 
     .contact__header-left h1 {
         font-size: 2.5rem;
+        margin-bottom: 1rem;
     }
 
     .contact__header-container {
@@ -420,13 +422,17 @@
 
     .contact__container {
         grid-template-columns: 1fr;
-        gap: 2rem;
-        padding: 0 1rem;
+        gap: 3rem;
+        padding: 2rem;
+    }
+
+    .contact {
+        margin-top: -2rem;
     }
 
     .contact__aside {
-        bottom: 0;
-        margin-top: 2rem;
+        width: 100%;
+        margin-bottom: 2rem;
     }
 
     .contact__form {
@@ -439,16 +445,30 @@
 }
 
 @media screen and (max-width: 600px) {
+    .contact__header {
+        padding: 4rem 0 5rem;
+    }
+
     .contact__header-left h1 {
         font-size: 2rem;
     }
 
     .contact__header-left p {
         font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .contact {
+        margin-top: -1rem;
+    }
+
+    .contact__container {
+        padding: 1.5rem;
+        gap: 2rem;
     }
 
     .contact__aside {
-        padding: 2rem;
+        padding: 1.5rem;
     }
 
     .contact__details li {
